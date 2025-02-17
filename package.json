@@ -1,0 +1,22 @@
+{
+  "name": "cypress-double-partner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "cypress": "^14.0.3"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress-xpath": "^2.0.1",
+    "typescript": "^5.7.2"
+  }
+}
