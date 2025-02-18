@@ -1,6 +1,6 @@
 require('cypress-xpath');
 
-class loginPage {
+class LoginPage {
 
     elements = {
         loginContentPage: () => cy.get('#account-login'),
@@ -13,30 +13,30 @@ class loginPage {
 
     validateLoginPageAccess(){
         cy.url().should("include", "/login");
-        this.elements.loginContentPage().should('be.exist') 
+        this.elements.loginContentPage().should('exist');
     }
 
     loginUser(userName, password){
-        this.elements.fileUserName().type(userName)
-        this.elements.filePassword().type(password)
+        cy.wait(200);
+        this.elements.fileUserName().type(userName);
+        this.elements.filePassword().type(password);
     }
 
-    buttonLogin(){
-        this.elements.buttonLogin().click()
+    clickLoginButton(){
+        this.elements.buttonLogin().click();
     }
 
     validateAccountPageAccess(){
-        cy.url().should("include", "/account")
+        cy.url().should("include", "/account");
     }
 
     selectForgottenPassword(){
-    this.elements.getForgottenPassword().click()    
-
+        this.elements.getForgottenPassword().click();
     }
 
     validateConfirmationMessage(){
-    this.elements.tittleConfirmation().should('be.visible') 
-}
+        this.elements.tittleConfirmation().should('be.visible');
+    }
 }
 
-export default loginPage;
+export default LoginPage;
